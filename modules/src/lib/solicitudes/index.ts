@@ -1,1 +1,1 @@
-export { default as ClientItem } from './client-item/app';
+export { default as ClientItem } from './client-item/clientitem';
