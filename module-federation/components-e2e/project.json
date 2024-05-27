@@ -1,0 +1,21 @@
+{
+  "name": "components-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "module-federation/components-e2e/src",
+  "implicitDependencies": ["components"],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": [
+        "{workspaceRoot}/dist/.playwright/module-federation/components-e2e"
+      ],
+      "options": {
+        "config": "module-federation/components-e2e/playwright.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

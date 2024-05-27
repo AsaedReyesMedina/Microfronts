@@ -1,0 +1,32 @@
+.pu-header-tabs-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pu-header-tabs-item {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  padding-right: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.pu-header-tabs-title {
+  display: flex;
+  flex-direction: row;
+}
+.pu-header-tabs-badge {
+  background-color: #ff0000;
+  border-radius: 24px;
+  color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-left: 4px;
+}
+.pu-header-tabs-tab {
+  width: 40px;
+  height: 4px;
+  background-color: #258026;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+}
