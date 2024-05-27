@@ -16,8 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@pu/modules": ["modules/src/index.ts"],
-      "components/Module": ["module-federation/components/src/remote-entry.ts"],
-      "components/solicitudes": ["module-federation/components/src/index.ts"]
+      "components/Module": ["modules/src/index.ts"],
+      "components/solicitudes": ["modules/src/lib/solicitudes/index.ts"],
+      "components/components": ["modules/src/lib/components/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -5,7 +5,8 @@ const config: ModuleFederationConfig = {
   library: { type: 'var', name: 'components' },
   exposes: {
     './Module': './src/remote-entry.ts',
-    './solicitudes': './src/index.ts',
+    './solicitudes': './../../modules/src/lib/solicitudes/index.ts',
+    './components': './../../modules/src/lib/components/index.ts',
   },
 };
 export default config;

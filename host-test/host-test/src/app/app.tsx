@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Header, ClientItem } from 'components/solicitudes'
+import { ClientItem } from 'components/solicitudes'
+import { Header } from 'components/components';
 export function App() {
   return (
     <>
