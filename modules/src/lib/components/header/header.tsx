@@ -5,7 +5,7 @@ export function Header() {
   return (
     <>
       <MantineProvider>
-        <Button>Components</Button>
+        <Button>Components header</Button>
       </MantineProvider>
     </>
 
