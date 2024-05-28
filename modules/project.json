@@ -9,7 +9,7 @@
       "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/modules",
+        "outputPath": "modules/dist/",
         "tsConfig": "modules/tsconfig.lib.json",
         "project": "modules/package.json",
         "entryFile": "modules/src/index.ts",
