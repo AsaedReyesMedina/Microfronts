@@ -1,0 +1,18 @@
+{
+  "name": "solicitudes-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "module-federation/solicitudes-e2e/src",
+  "implicitDependencies": ["solicitudes"],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": [
+        "{workspaceRoot}/dist/.playwright/module-federation/solicitudes-e2e"
+      ],
+      "options": {
+        "config": "module-federation/solicitudes-e2e/playwright.config.ts"
+      }
+    }
+  }
+}

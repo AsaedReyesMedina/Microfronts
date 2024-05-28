@@ -17,8 +17,12 @@
     "paths": {
       "@pu/modules": ["modules/src/index.ts"],
       "components/Module": ["modules/src/index.ts"],
+      "components/components": ["modules/src/lib/components/index.ts"],
       "components/solicitudes": ["modules/src/lib/solicitudes/index.ts"],
-      "components/components": ["modules/src/lib/components/index.ts"]
+      "solicitudes/components": ["modules/src/lib/solicitudes/index.ts"],
+      "solicitudes/Module": [
+        "module-federation/solicitudes/src/remote-entry.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

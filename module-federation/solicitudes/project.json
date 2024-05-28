@@ -1,0 +1,94 @@
+{
+  "name": "solicitudes",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "module-federation/solicitudes/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/module-federation/solicitudes",
+        "index": "module-federation/solicitudes/src/index.html",
+        "baseHref": "/",
+        "main": "module-federation/solicitudes/src/main.ts",
+        "tsConfig": "module-federation/solicitudes/tsconfig.app.json",
+        "assets": [
+          "module-federation/solicitudes/src/favicon.ico",
+          "module-federation/solicitudes/src/assets"
+        ],
+        "styles": ["module-federation/solicitudes/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "module-federation/solicitudes/webpack.config.ts"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "module-federation/solicitudes/src/environments/environment.ts",
+              "with": "module-federation/solicitudes/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "module-federation/solicitudes/webpack.config.prod.ts"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "solicitudes:build",
+        "hmr": true,
+        "port": 4202
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "solicitudes:build:development"
+        },
+        "production": {
+          "buildTarget": "solicitudes:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "module-federation/solicitudes/jest.config.ts"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "solicitudes:build",
+        "watch": false,
+        "port": 4202
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "solicitudes:build:development"
+        },
+        "production": {
+          "buildTarget": "solicitudes:build:production"
+        }
+      }
+    }
+  }
+}
