@@ -4,9 +4,9 @@ import './app.css';
 export function Header() {
   return (
     <>
-      <MantineProvider>
-        <Button>Components header</Button>
-      </MantineProvider>
+      <div>
+        Header component
+      </div>
     </>
 
   );

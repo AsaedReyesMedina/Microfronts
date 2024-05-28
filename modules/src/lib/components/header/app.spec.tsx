@@ -1,15 +1,8 @@
 import { render } from '@testing-library/react';
+import Header from './header';
 
-import App from './header';
-
-describe('App', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<App />);
-    expect(baseElement).toBeTruthy();
-  });
-
-  it('should have a greeting as the title', () => {
-    const { getByText } = render(<App />);
-    expect(getByText(/Welcome header/gi)).toBeTruthy();
-  });
+test('renders Header component', () => {
+  const { getByText } = render(<Header />);
+  const linkElement = getByText(/Header component/i);
+  expect(linkElement).not.toBeNull();
 });

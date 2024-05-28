@@ -1,15 +1,9 @@
 import { render } from '@testing-library/react';
+import ClientItem from './clientitem';
 
-import App from './clientitem';
-
-describe('App', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<App />);
-    expect(baseElement).toBeTruthy();
-  });
-
-  it('should have a greeting as the title', () => {
-    const { getByText } = render(<App />);
-    expect(getByText(/Welcome client-item/gi)).toBeTruthy();
+describe('ClientItem', () => {
+  it('se renderiza correctamente', () => {
+    const { getByText } = render(<ClientItem />);
+    expect(getByText('client item component')).toBeTruthy();
   });
 });

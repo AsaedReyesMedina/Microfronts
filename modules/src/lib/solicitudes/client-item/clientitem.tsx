@@ -5,9 +5,9 @@ export function ClientItem() {
 
   return (
     <>
-      <MantineProvider>
-        <Button>solicitudes only</Button>
-      </MantineProvider>
+      <div>
+        client item component
+      </div>
     </>
   );
 }
