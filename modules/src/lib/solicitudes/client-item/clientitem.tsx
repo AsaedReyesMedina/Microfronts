@@ -8,6 +8,9 @@ export function ClientItem() {
       <div>
         client item component
       </div>
+      <MantineProvider>
+        <Button>client item mantine </Button>
+      </MantineProvider>
     </>
   );
 }

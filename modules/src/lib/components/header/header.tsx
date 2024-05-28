@@ -7,6 +7,9 @@ export function Header() {
       <div>
         Header component
       </div>
+      <MantineProvider>
+        <Button>header mantine </Button>
+      </MantineProvider>
     </>
 
   );
