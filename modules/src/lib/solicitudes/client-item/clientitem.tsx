@@ -6,7 +6,7 @@ export function ClientItem() {
   return (
     <>
       <MantineProvider>
-        <Button>solicitudes</Button>
+        <Button>solicitudes only</Button>
       </MantineProvider>
     </>
   );
