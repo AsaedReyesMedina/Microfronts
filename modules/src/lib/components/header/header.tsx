@@ -1,10 +1,12 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Button } from '@kds/kdsr';
+import { Button, MantineProvider } from '@mantine/core';
 import './app.css';
 export function Header() {
   return (
     <>
-      <Button label='client-item' variant='contained' size='small' />
+      <MantineProvider>
+        <Button>Components header</Button>
+      </MantineProvider>
     </>
 
   );
